@@ -1,0 +1,164 @@
+/* GENERAL */
+
+:root {
+
+    /* ver sobre variables en CSS*/
+    --max-width: 1280px;
+    --min-width: 320px;
+    --accent-color: #00c2ff;
+}
+
+* {
+    box-sizing: border-box;
+    /* El valor border-box en el box-sizing hace que el padding y el border 
+    pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente
+    */
+}
+
+body, html {
+
+    height: 100%; /* ahorra muchos problemas */
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* enlaces*/
+
+a {
+    text-decoration: none;
+    color: white /* de todas maneras el color lo hereda de arriba*/
+}
+
+.pedir-cita {
+    background-color: var(--accent-color);
+    padding: .5rem 2rem;
+    font-size: 24px;
+}
+/* CONTAINER*/
+
+.container {
+    height: 100vh;
+    display: flex;
+  
+    flex-direction: column;
+    min-width: var(--min-width);
+    background-image: url('https://c1.wallpaperflare.com/preview/417/570/412/auto-2cv-citro%C3%ABn-oldtimer.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* aplicamos clases a las tres partes del main*/
+
+.header .content .footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+   
+}
+
+
+
+/*HEADER*/
+
+.header {
+
+    max-width: var(--max-width);
+    /* display flex mueve HORIZONTAL! */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    margin-left: 10rem;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.logo img {
+
+    margin-right: .5rem;
+}
+
+.menu-list {
+    
+    margin: 0;
+
+}
+
+.menu-list_item {
+
+    display: inline-flex;
+    margin: 0 .5rem;
+    font-size: 24px;
+}
+
+/* aplica valores al ultimo item de la clase 
+.menu-list_item :last-child {
+    margin: 0;
+} */
+
+
+
+/* CONTENT */
+
+.content {
+ 
+    /* flex-grow sirve para ocupar todo el espacio posible. crece todo lo que puede utilizando el espacio */
+    
+   
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10rem;
+
+}
+
+
+.content-clain {
+
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.content-subclaim {
+    font-size: 1.5rem;
+    margin: .5rem 0;
+    margin-bottom: 2rem;
+}
+
+/* FOOTER */
+
+.footer_wrapper {
+   
+    background-color: black ; 
+
+ 
+    
+    
+    
+}
+
+.footer {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+        
+        
+    
+}
+
+.footer_items {
+    color: red;
+}
